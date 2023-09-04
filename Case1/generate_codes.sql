@@ -6,7 +6,7 @@ DECLARE @code VARCHAR(8)
 DECLARE @counter INT = 1;
 DECLARE @Result INT;
 -- Kod üretimi ve benzersizlik kontrolü döngüsü
-WHILE @counter <= 100000
+WHILE @counter <= 1000
 BEGIN
 		-- Rastgele 8 karakter uzunluğunda bir kod üretin
 		SET @code = ''
