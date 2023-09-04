@@ -1,5 +1,6 @@
 
 #  Kaizen_Case
+[Case_Study](https://drive.google.com/file/d/1LCAqeNJayL_8BG_Xuc8emZ0BHcy_UNC8/view?usp=sharing)
 
 ## Case 1
 
@@ -32,7 +33,7 @@ Json dosyasını okuyup, ekrana istenen sonucu yazan Consol uygulaması.
 ![Uygulama Ekran Görüntüsü](https://www.linkpicture.com/q/Ekran-goruntusu-2023-09-04-205033.png)
 
 
-[Case_Study](https://drive.google.com/file/d/1LCAqeNJayL_8BG_Xuc8emZ0BHcy_UNC8/view?usp=sharing)
+
 
   
 
