@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Xml.Linq;
+using Case2;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -12,10 +13,10 @@ namespace SaaSToText
     {
         static void Main(string[] args)
         {
-            string filePath = "response.json";
+            var response = new Response();
 
             // Dosyayı oku
-            var jsonString = File.ReadAllText(filePath);
+            var jsonString = response.res;
 
             jsonString = "{\r\n   \"items\":" + jsonString + "}";
 
