@@ -23,7 +23,6 @@ EXEC [dbo].[generate_codes]
 ## Case 2
 
 Json dosyasını okuyup, ekrana istenen sonucu yazan Consol uygulaması.
-
 [Case 2](https://github.com/sefaozturk1453/Kaizen_Case/tree/master/Case2)
 
 **Gerekli kütüphane:** Newtonsoft.Json
