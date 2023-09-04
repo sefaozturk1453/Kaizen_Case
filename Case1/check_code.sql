@@ -4,9 +4,9 @@ CREATE PROCEDURE [dbo].[check_code]
 @IsValid int out
 AS
 BEGIN
-    SET @IsValid = 1; -- Varsayýlan
+    SET @IsValid = 1; -- VarsayÄ±lan
 
-    -- Kodun uzunluðunun ve karakterlerin karakter kümesinde olup olmadýðýný kontrol ediyoruz
+    -- Kodun uzunluÄŸunun ve karakterlerin karakter kÃ¼mesinde olup olmadÄ±ÄŸÄ±nÄ± kontrol ediyoruz
     IF LEN(@Code) = 8
     BEGIN
 		
@@ -15,19 +15,19 @@ BEGIN
         BEGIN
             IF CHARINDEX(SUBSTRING(@Code, @i, 1), 'ACDEFGHKLMNPRTXYZ234579') = 0
             BEGIN
-                SET @IsValid = 0; -- Durumunu güncelle
-                BREAK; -- Eðer geçerli olmayan bir karakter bulunursa döngüyü sonlandýr
+                SET @IsValid = 0; -- Durumunu gÃ¼ncelle
+                BREAK; -- EÄŸer geÃ§erli olmayan bir karakter bulunursa dÃ¶ngÃ¼yÃ¼ sonlandÄ±r
             END
-            SET @i = @i + 1; -- Sayaç
+            SET @i = @i + 1; -- SayaÃ§
         END
 
 		IF(@IsValid = 1)
 		BEGIN
 			BEGIN TRY
-			INSERT INTO kodlar (kod) VALUES (@Code)
+			INSERT INTO KOD (Kodlar) VALUES (@Code)
 			END TRY
 			BEGIN CATCH
-			SELECT 'Hata Oluþtu: '+@Code+' zaten kullanýlýyor. Yenisi üretildi.'  + ERROR_MESSAGE(); -- Hata mesajýný yazdýrýr
+			SELECT 'Hata OluÅŸtu: '+@Code+' zaten kullanÄ±lÄ±yor. Yenisi Ã¼retildi.'  + ERROR_MESSAGE(); -- Hata mesajÄ±nÄ± yazdÄ±rÄ±r
 			SET @IsValid = 0
 			END CATCH;
 		END
